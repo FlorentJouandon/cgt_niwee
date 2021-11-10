@@ -14,12 +14,10 @@
 
                 <label for="category">Choisissez la catégorie de votre article :</label>
                 <select type="select" name="category" class="px-3 mx-2 py-1">
-                    
-                    <?php foreach ($_SESSION['category'] as $cat): ?>
-
-                        <option value="<?php echo($cat['id']) ;?>" ><?php echo($cat['name']);?></option>
-
-                    <?php endforeach ?>
+                        <option value="publications" >Publications</option>
+                        <option value="droits" >Nos Droits</option>
+                        <option value="collectif" >Notre Collectif</option>
+                        <option value="formations" >Nos Formations</option>
                 </select>
             </div>
 
@@ -33,12 +31,12 @@
             </div>
 
             <div class="py-3">
-                <label for="img">Ajouter image :</label>
+                <label for="img">Ajouter une image :</label>
                 <input type="file" name="img" class="file">
             </div>
             <div class="py-2">
-                <label for="pdf">Ajouter ficher :</label>
-                <input type="file" name="pdf" class="file">
+                <label for="pdf">Ajouter un ficher :</label>
+                <input type="file" name="files" class="file">
             </div>
             <div class="py-5">
                 <input type="submit" name="article" class="btn text-white col-6">

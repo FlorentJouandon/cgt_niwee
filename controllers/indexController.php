@@ -10,11 +10,14 @@ if($route === 'admin'){
     // ADMIN
     if(isset($_POST['article']))
     {
-        Router::controller('article');
+        Router::controller('adArticle');
     }
     Router::adTemplate('index');
 }else{
     // VISITEUR
+    if(($route === '')OR($route === 'cgt_niwee')OR($route === 'accueil')OR($route === 'publications')OR($route === 'droits')OR($route === 'collectif')OR($route === 'formations')){
+        Router::controller('article');
+    }
     if(isset($_POST['contact']))
     {
         Router::controller('contact');

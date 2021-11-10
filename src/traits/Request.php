@@ -13,13 +13,13 @@ trait Request
      * @param  mixed $receive
      * @return void
      */
-    public static function insert($table, $column, $values, $receive)
+    public static function insert($table, $column, $values)
     {
-        $pdo = Database::getInstance();
-        $sql = $pdo->prepare("INSERT INTO ".$table." (".$column.") values ('".$values."','".$receive."',NOW())");   
-        $sql -> execute();
-        return $sql;
-
+        $pdo = new Database();
+        $pdo->getInstance();
+        $sql = $pdo->prepare("INSERT INTO ".$table." (".$column.", date) values ('".$values."', NOW())");   
+        return $sql -> execute();
+        $pdo = null;
     }
 
     /**
@@ -27,11 +27,12 @@ trait Request
      *
      * @return void
      */
-    public static function findAll($table)
+    public static function find($column, $table)
     {   
-        $pdo = Database::getInstance();   
-        $sql = $pdo->query("SELECT * FROM ".$table);
+        $pdo = new Database();
+        $pdo->getInstance();
+        $sql = $pdo->query("SELECT ".$column." FROM ".$table."");     
         return $sql->fetchAll();
-
+        $pdo = null;
     }
 }

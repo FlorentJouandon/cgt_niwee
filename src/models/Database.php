@@ -5,9 +5,14 @@ namespace Models;
     
 class Database extends PDO
 {
-    private static $instance;
+    protected $instance = null;
 
-    private function __construct()
+    public function __construct()
+    {
+        $this->connect();
+    }
+
+    private function connect()
     {
         $dsn = "mysql:host=".DB_host.";dbname=".DB_name."; charset=utf8mb4";
         try
@@ -23,18 +28,12 @@ class Database extends PDO
             $msg_connect = "échec ";
         }
     }
-    
-    public static function getInstance()
+
+    public function getInstance()
     {
-        if(self::$instance === null){
-            self::$instance = new self();
-            return self::$instance;
-        }
-    }
-    public static function instanceNull()
-    {
-        if(self::$instance !== null){
-            self::$instance = null;
+        if($this->instance === null){
+            $this->instance = new self();
+            return $this->instance;
         }
     }
     

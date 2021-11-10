@@ -2,7 +2,7 @@
     "name": "shasta/cgt_niwee",
     "autoload": {
         "psr-4": {
-            "Models\\": "src/",
+            "Models\\": "src/models",
             "Traits\\": "src/traits",
        "Controllers\\": "controllers",
              "Views\\": "templates"

@@ -3,24 +3,27 @@ namespace Controllers;
     use Traits\Request;
     use Traits\Cookie;
 
-
-if(isset($_POST['email']))
-{
-    if(!empty($_POST['email'])):
-        $table = 'email';
-        $column ='mail, receive, date';
+    
+    if(isset($_POST['email']))
+    {
+        $table = 'newsletter';
+        $column ='email';
         $values = $_POST['email'];
-        $receive = 1;
-        
-        $requete = Request::insert($table, $column, $values, $receive);
 
-        $error = false;
-        $msg = "Félicitation, vous vous êtes inscrit à notre newsletter.";
-        Cookie::newsletter();
-    else:
-        $error = true;
-        $msg = "Vous êtes déjà inscrit à notre newsletter.";
-    endif;
+        // $email = Request::find($column,"newsletter WHERE email = '".$_POST['email']."'");   
+
+        if(!empty($_POST['email'])):
+            
+            $requete = Request::insert($table, $column, $values);
+
+            $error = false;
+            $msg = "Votre message a bien été envoyé et vous êtes bien inscrit à notre newsletter.</br> Nous vous répondrons dans les plus brefs délais.</br> Merci de votre intérêt.";
+
+            // Cookie::newsletter();
+        else:
+            $error = true;
+            $msg = "Votre message a bien été envoyé, vous êtes déjà inscrit à notre newsletter.</br> Nous vous répondrons dans les plus brefs délais.</br> Merci de votre intérêt.";
+        endif;
 
 }else{
     $error = true;

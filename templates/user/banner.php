@@ -19,7 +19,7 @@
                     <form action="" method="POST" id="formNewsletter">
                         <div class="row">   
                             <input type="email" name="email" placeholder="E-mail" class="col-6 mt-2">
-                            <input class="btn btn-outline-warning col-6 mt-2 p-1" type="submit" name="newsletter" value="Je m'abonne !" class="pt-1">
+                            <input class="btn btn-outline-warning col-6 mt-2 p-2" type="submit" name="newsletter" value="Je m'abonne " class="pt-1">
                         </div>
                 <?php else: ?>
                         <div id="valider" class="row text-white ">
