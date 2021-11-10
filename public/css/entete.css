@@ -1,0 +1,42 @@
+
+#bg-img{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.bg-img{
+    position: relative;
+    clip: rect(0px,0px,250px,0px);
+}
+.bg-img img{
+    width: 2500px;
+}
+ /* TEXTE ENTETE */
+.titre{
+    position: relative;
+    height: 285px;
+    padding-top: 69px; 
+    padding-left: 450px;
+    opacity: 60%;
+    background-color: rgba(189, 188, 188, 0.5);
+}
+.tous{
+    font-weight: bold;
+    font-size: 75px;
+    color:  rgba(255, 217, 0);
+}
+.depuis{
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: -25px;
+    color:  rgba(255, 217, 0);
+}
+.ans{
+    font-weight: bold;
+    font-size: 175px;
+    margin-left: 190px;
+    margin-top: -98px;
+    color:  rgba(255, 217, 0);
+}
+
+

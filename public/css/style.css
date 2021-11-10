@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+::selection{
+    background-color: #ED5555;
+    color: gold;
+}
+a:link{
+    text-decoration:none;
+}
+a:hover{
+    color: black;
+}
+input:focus, textarea:focus{
+    outline:white;
+}
+
+li{
+    list-style: none;
+}
+button{
+    color: white;
+    background-color: #ED5555;
+    border-style: none;
+    padding: 5px;
+}
+button:hover{
+    color:gold;
+}
+
+.red{
+    background-color: #ED5555;
+}
