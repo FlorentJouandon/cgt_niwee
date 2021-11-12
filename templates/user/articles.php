@@ -1,37 +1,47 @@
 
 <div id="article" class="container-fluid col-8">
-<?php foreach($_SESSION['articles'] as $article):?>
+<?php 
+    $article = $_SESSION['articles'];
+    for($i=0; $i<=4; $i+=2):
+        if(isset($article[$i])):
+?>
     <div class="article my-5">
         <div class="bg-article bg-white">
             <div class="text py-5">
-                <h1><?php echo($article['title']) ;?></h1>
-                <p><?php echo($article['date']) ;?> | <?php echo($article['category']) ;?></p>
+                <h1><?php echo($article[$i]['title']) ;?></h1>
+                <p class="text-warning"><?php echo($article[$i]['date']) ;?><span class="text-black"> | </span><?php echo($article[$i]['category']) ;?></p>
                 <div class="row">
                     <p class="col-6">
-                        <?php echo($article['text']) ;?>
+                    <?php echo(substr($article[$i]['text'],0,400)) ;?>... 
                     </p>
-                    <!-- <img class="img-article col-6 w-50 h-50"src="public\img\fouleCGT.jpg" alt=""> -->
+                    <img class="img-article col-6 w-50 h-50"src="public\img\fouleCGT.jpg" alt="">
                 </div>
                 
-                <button class="col-12 mt-5">Lire l'article</button>
+                <button type="submit" name="article" class="col-12 mt-5">Lire l'article</button>
             </div>
         </div>
     </div>
-    
+<?php 
+        endif;
+        if(isset($article[$i+1])):
+?>
     <div class="article">
         <div class="bg-article bg-article2 bg-white">
             <div class="text py-5 text2">
-                <h1><?php echo($article['title']) ;?></h1>
-                <p><?php echo($article['date']) ;?> | <?php echo($article['category']) ;?></p>
+                <h1><?php echo($article[$i+1]['title']) ;?></h1>
+                <p class="text-warning"><?php echo($article[$i+1]['date']) ;?><span class="text-black"> | </span><?php echo($article[$i+1]['category']) ;?></p>
                 <div class="row">
                     <img class="img-article col-6 w-50 h-50"src="public\img\fouleCGT.jpg" alt="">
                     <p class="col-6">
-                        <?php echo($article['text']) ;?>    
+                        <?php echo(substr($article[$i+1]['text'],0,400)) ;?>...    
                     </p>
                 </div>
-                <button class="col-12 mt-5">Lire l'article</button>
+                <button type="submit" name="article" class="col-12 mt-5">Lire l'article</button>
             </div>
         </div>
     </div>
-    <?php endforeach;?>
+<?php   
+        endif;
+    endfor;
+?>
 </div>

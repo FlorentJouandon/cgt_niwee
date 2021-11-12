@@ -1,6 +1,7 @@
 <?php
 namespace Traits;
     use Models\Database;
+    use PDO;
 
 trait Request
 { 
@@ -24,7 +25,8 @@ trait Request
 
     /**
      * Requete SQL findAll
-     *
+     * @param  string $column
+     * @param  string $table
      * @return void
      */
     public static function find($column, $table)

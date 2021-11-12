@@ -4,8 +4,18 @@ namespace Controllers;
     use Traits\Router;
 
 $route = Router::parseURL();
-$article = Request::find('category','articles ORDER BY id DESC');
-$articles = Request::find('*','articles ORDER BY id DESC');
 
-// var_dump($articles);
+if(($route === '')OR($route === 'cgt_niwee')OR($route === 'accueil'))
+{
+    $articles = Request::find('*','articles ORDER BY id DESC');
+}else
+{
+    $articles = Request::find('*',"articles WHERE category = '".$route."' ORDER BY id DESC");
+}
+
 $_SESSION['articles'] = $articles;
+
+if(!empty($_POST['article'])){
+
+    Router::template('contact');
+}
