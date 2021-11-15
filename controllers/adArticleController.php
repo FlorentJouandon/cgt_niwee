@@ -12,11 +12,13 @@ if(isset($_POST['article'])):
 
         $requete = Request::insert($table, $column, $values);
 
+        $admin = false;
         $error = false;
         $msg = "Félicitation, vous avez créé un nouvel article."; 
     }
     else
     {
+        $admin = true;
         $error = true;
         $msg = "Vous devez obligatoirement donner un titre à votre article, soumettre un texte et/ou télécharger une image et/ou un pdf.";        
     } 
@@ -27,4 +29,6 @@ endif;
 
 $_SESSION['error'] = $error;
 $_SESSION['msg'] = $msg;
+$_SESSION['admin'] = $admin;
+
 ?>

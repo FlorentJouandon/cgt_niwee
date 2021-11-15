@@ -7,6 +7,9 @@ body{
     background-color: #ED5555;
     color: gold;
 }
+a{
+    color : #ED5555;
+}
 a:link{
     text-decoration:none;
 }
@@ -33,3 +36,4 @@ button:hover{
 .red{
     background-color: #ED5555;
 }
+

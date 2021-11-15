@@ -8,9 +8,8 @@ $route = Router::parseURL();
 
 if($route === 'admin'){
     // ADMIN
-    if(isset($_POST['article']))
-    {
-        Router::controller('adArticle');
+    if(!empty($_POST['login']) && !empty($_POST['pwd'])){
+        Router::controller('admin');
     }
     Router::adTemplate('index');
 }else{

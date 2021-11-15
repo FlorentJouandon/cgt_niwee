@@ -22,10 +22,10 @@ Router::config();?>
     <link rel="stylesheet" href="public\css\contact.css" type="text/css">
     <link rel="stylesheet" href="public\css\banner.css" type="text/css">
     <link rel="stylesheet" href="public\css\footer.css" type="text/css">
-    <link rel="stylesheet" href="public\css\adArticle.css" type="text/css">
+    <link rel="stylesheet" href="public\css\admin.css" type="text/css">
 
 </head>
-<body>
+<body class="bg-light">
     
     <?php Router::controller('index');?>
     

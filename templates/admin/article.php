@@ -6,7 +6,7 @@
     <hr class="mb-5">
 
     <?php
-    if(empty($_POST)):
+    if(empty($_POST['article'])):
         if($_SESSION['error'] = true):?>
 
         <form class="createArticle container col-8 bg-white text-center mb-5" action="" method="POST">
@@ -48,7 +48,7 @@
         <div id="validerArticle" class="createArticle container col-8 bg-white text-center mb-5 p-5">
             <div id="msg"><?php echo $_SESSION['msg'];?></div>
             <div id="return">
-                <a href=""><button type="submit" name="return" class="mt-3">Retour</button></a>
+               <a href="/admin"><button type="submit" name="return" class="mt-3">Retour</button></a>
             </div>
         </div>
 
