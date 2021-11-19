@@ -24,7 +24,7 @@ trait Request
     }
 
     /**
-     * Requete SQL findAll
+     * Requete SQL select
      * @param  string $column
      * @param  string $table
      * @return void

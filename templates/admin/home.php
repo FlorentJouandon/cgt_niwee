@@ -1,2 +1,0 @@
-<h2>test</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rerum nobis illo ipsam incidunt vero? Maxime repudiandae aperiam, cupiditate, dolore inventore, deserunt totam temporibus ea placeat ratione commodi in nesciunt.</p>

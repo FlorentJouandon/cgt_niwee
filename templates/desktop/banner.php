@@ -1,7 +1,7 @@
 
 <div id="banner" class="container-fluid row">
     <div id="band-contact" class="col-6">
-        <a href=<?php DOC_ROOT ;?>"contact">
+        <a href=<?php DOC_ROOT ;?>"Contactez_Nous">
             <div class="bg">
                 <p class="left h6">Des question ? Envie de nous parler ?!</p>
                 <div class="p-left h5 text-white">Contactez-Nous !</div>

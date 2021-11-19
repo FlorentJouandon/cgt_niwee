@@ -15,5 +15,8 @@ trait Cookie
         if(isset($_COOKIE['newsletter'])){
             $_COOKIE['newsletter'];
         }
+        if(isset($_COOKIE['media'])){
+            $_COOKIE['media'];
+        }
     }
 }

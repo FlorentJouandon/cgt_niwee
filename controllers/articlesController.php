@@ -3,9 +3,10 @@ namespace Controllers;
     use Traits\Request;
     use Traits\Router;
 
+    
 $route = Router::parseURL();
 
-if(($route === '')OR($route === 'cgt_niwee')OR($route === 'accueil'))
+if(($route === '')OR($route === 'syndicat_niwee')OR($route === 'Accueil'))
 {
     $articles = Request::find('*','articles ORDER BY id DESC');
 }else
@@ -15,7 +16,6 @@ if(($route === '')OR($route === 'cgt_niwee')OR($route === 'accueil'))
 
 $_SESSION['articles'] = $articles;
 
-if(!empty($_POST['article'])){
-
-    Router::template('contact');
+if($route === 'article'){
+    Router::template('article');
 }

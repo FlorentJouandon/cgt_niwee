@@ -14,33 +14,37 @@ trait Router
      * @return void
      */
     public static function controller($controller){
-        require_once 'controllers/'.$controller.'Controller.php'; 
+        require_once '../controllers/'.$controller.'Controller.php'; 
     }
 
     /**
+     * route Index
+     * selectionne un index.
+     * 
+     * @param  string $index
+     * @return void
+     */
+    public static function index($folder){
+        if($folder !== 'home'){
+            require_once '../templates/'.$folder.'/index.php';
+        }else{
+            require_once '../templates/home.php';
+        }
+    }
+    
+    /**
      * routeTemplate
-     * selectionne un template admin.
+     * selectionne une template.
      * 
      * @param  string $template
      * @return void
      */
-    public static function adTemplate($template){
-        require_once 'templates/admin/'.$template.'.php';
-    }
-
-    /**
-     * routeTemplate
-     * selectionne un template.
-     * 
-     * @param  string $template
-     * @return void
-     */
-    public static function template($template){
-            if($template !== 'index'){
-                require_once 'templates/user/'.$template.'.php';
-            }else{
-                require_once 'templates/'.$template.'.php';
-            }
+    public static function template($folder,$template){
+        if($template !== '404'){
+            require_once '../templates/'.$folder.'/'.$template.'.php';
+        }else{
+            require_once '../templates/404.php';
+        }
     }
     
     /**
@@ -61,6 +65,6 @@ trait Router
      * @return void
      */
     public static function config(){
-        require_once "config.php";
+        require_once "../config.php";
     }
 }

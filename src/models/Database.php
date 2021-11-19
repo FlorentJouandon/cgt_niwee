@@ -20,12 +20,12 @@ class Database extends PDO
             parent::__construct($dsn, DB_user, DB_pwd);
             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $msg_connect = "connexion ";
+            $msg = "connexion ";
 
         }catch(PDOException $pe)
         {
             die($pe->getMessage());
-            $msg_connect = "échec ";
+            $msg = "échec ";
         }
     }
 

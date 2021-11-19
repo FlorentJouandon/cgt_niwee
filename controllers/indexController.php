@@ -1,32 +1,20 @@
 <?php
 namespace Controllers;
     use Traits\Router;
-    use Traits\Request;
-    
 
-$route = Router::parseURL(); 
 
-if($route === 'admin'){
-    // ADMIN
-    if(!empty($_POST['login']) && !empty($_POST['pwd'])){
-        Router::controller('admin');
+$route = Router::parseURL();
+Router::controller('menu');
+$menu = MENU;
+
+foreach ($menu as $tab):
+    if(($route === '')OR($route === 'syndicat_niwee')OR($route === 'article')OR($route === $tab['url'])&&($route !== 'Contactez_Nous')){
+        Router::controller('articles');
     }
-    Router::adTemplate('index');
-}else{
-    // VISITEUR
-    if(($route === '')OR($route === 'cgt_niwee')OR($route === 'accueil')OR($route === 'publications')OR($route === 'droits')OR($route === 'collectif')OR($route === 'formations')){
-        Router::controller('article');
-    }
-    if(isset($_POST['contact']))
-    {
-        Router::controller('contact');
-        if(isset($_POST['checkletter'])){
-            Router::controller('newsletter');
-        }
-    }
-    if(isset($_POST['newsletter']))
-    {
-        Router::controller('newsletter');
-    }
-    Router::template('index');
+endforeach;
+
+if($route === 'Contactez_Nous'){
+    Router::controller('contact');
 }
+$folder = 'home';
+Router::index($folder);

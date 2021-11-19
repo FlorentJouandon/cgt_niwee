@@ -6,7 +6,7 @@
     <hr class="mb-5">
     <div class="container-fluid col-4 text-center my-3">
         <div class="bg-adresse">
-            <div class="contact-adresse text-white ">
+            <div class="contact-adresse mx-5 text-white ">
                 <p class="p-3">
                         Union Départementale<br>
   <span class="fw-bold">CGT Puy-de-Dôme</span><br>
@@ -28,7 +28,7 @@
 
                         <form action="" method="POST" id="formContact">
                             <div>
-                                <p class="text-muted">Tous les champs marqué d'un * sont obligatoires</p>
+                                <p class="text-muted text-center">Tous les champs marqué d'un * sont obligatoires</p>
                             </div>
                             <div>
                                 <input class="contact-name col-6"type="text" name="name" placeholder="Nom*">

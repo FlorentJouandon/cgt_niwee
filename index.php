@@ -1,3 +1,3 @@
-<?php 
-
-require_once "public/index.php";?>
+<?php
+// Silence is golden.
+?>
