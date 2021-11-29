@@ -34,28 +34,28 @@
             <a href="Accueil" class="tab">Accueil</a>
         </div>
         <div id="tab-publication" class="row">
-            <a href=<?php DOC_ROOT ;?>"Nos_Publications"><div class="bg-menu"></div></a>
-            <a href=<?php DOC_ROOT ;?>"Nos_Publications" class="tab">Publications</a>
+            <a href="Nos_Publications"><div class="bg-menu"></div></a>
+            <a href="Nos_Publications" class="tab">Publications</a>
         </div>
         <div id="tab-droit" class="row">
-            <a href=<?php DOC_ROOT ;?>"Nos_Droits"><div class="bg-menu"></div></a>
-            <a href=<?php DOC_ROOT ;?>"Nos_Droits" class="tab">Nos Droits</a>
+            <a href="Nos_Droits"><div class="bg-menu"></div></a>
+            <a href="Nos_Droits" class="tab">Nos Droits</a>
         </div>
         <div id="tab-collectif" class="row">
-            <a href=<?php DOC_ROOT ;?>"Notre_Collectif"><div class="bg-menu"></div></a>
-            <a href=<?php DOC_ROOT ;?>"Notre_Collectif" class="tab">Notre Collectif</a>
+            <a href="Notre_Collectif"><div class="bg-menu"></div></a>
+            <a href="Notre_Collectif" class="tab">Notre Collectif</a>
         </div>
         <div id="tab-formation" class="row">
-            <a href=<?php DOC_ROOT ;?>"Nos_Formations"><div class="bg-menu"></div></a>
-            <a href=<?php DOC_ROOT ;?>"Nos_Formations" class="tab">Nos Formations</a>
+            <a href="Nos_Formations"><div class="bg-menu"></div></a>
+            <a href="Nos_Formations" class="tab">Nos Formations</a>
         </div>
         <div id="tab-contact" class="row">
-            <a href=<?php DOC_ROOT ;?>"Contactez_Nous"><div class="bg-menu"></div></a>
-            <a href=<?php DOC_ROOT ;?>"Contactez_Nous" class="tab">Contact</a>
+            <a href="Contactez_Nous"><div class="bg-menu"></div></a>
+            <a href="Contactez_Nous" class="tab">Contact</a>
         </div>
         <div id="tab-syndic" class="row">
-            <a href=<?php DOC_ROOT ;?>"Se_Syndiquer"><div class="bg-syndic"></div></a>
-            <a href=<?php DOC_ROOT ;?>"Se_Syndiquer" class="tab-syndic">Se Syndiquer</a>
+            <a href="Se_Syndiquer"><div class="bg-syndic"></div></a>
+            <a href="Se_Syndiquer" class="tab-syndic">Se Syndiquer</a>
         </div>
     </div>
 </div>

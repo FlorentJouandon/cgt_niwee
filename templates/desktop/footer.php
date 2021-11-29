@@ -32,6 +32,8 @@
                 <a href="" class="liens-footer" target="_blank">Mentions légales</a>
                 <span> | </span>
                 <a href="" class="cookie" target="_blank">Configurer les cookies</a>
+                <span> | </span>
+                <a href="Admin" class="cookie" target="_blank">Se connecter</a>
             </div>
         </div>
     </div>

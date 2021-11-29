@@ -8,13 +8,22 @@ Router::controller('menu');
 $menu = MENU;
 
 foreach ($menu as $tab):
-    if(($route === '')OR($route === 'syndicat_niwee')OR($route === 'article')OR($route === $tab['url'])&&($route !== 'Contactez_Nous')){
+    if(($route === $tab['url'])&&($route !== 'Contactez_Nous')){
         Router::controller('articles');
+        Router::controller('newsletter');
     }
 endforeach;
 
 if($route === 'Contactez_Nous'){
     Router::controller('contact');
 }
+if($route === 'Admin'){
+    Router::controller('login');
+    Router::controller('create');
+}
 $folder = 'home';
 Router::index($folder);
+
+
+
+

@@ -1,6 +1,14 @@
+$(document).ready(function(){
 
-if( screen.width <= 920 ){
-    document.cookie = 'media=920; path=/; secure';
-} else {
-    document.cookie = 'media=921; path=/; secure';
-}
+    $('#select').click(function(){
+        $('.select').show("slide");
+        $('.create').hide("slide");
+    });
+
+    $('#create').click(function(){
+        $('.create').show("slide");
+        $('.select').hide("slide");
+    });
+
+    
+});

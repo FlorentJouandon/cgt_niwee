@@ -8,4 +8,4 @@ define("MOB","mobile");
 define("DESK","desktop");
 
 define("NOM","CGT");
-define("DOC_ROOT", $_SERVER['DOCUMENT_ROOT'].'/syndicat_niwee');
+define("DOC_ROOT", $_SERVER['DOCUMENT_ROOT'].'/cgt_niwee');

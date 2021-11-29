@@ -15,7 +15,7 @@
             
             <div class="band-newsletter pt-2">
                 
-                <?php if(!isset($_COOKIE['newsletter'])): ;?>
+                <?php if(!isset($_COOKIE['newsletter']) OR ($_SESSION['error'] === true)): ;?>
                     <form action="" method="POST" id="formNewsletter">
                         <div class="row">   
                             <input type="email" name="email" placeholder="E-mail" class="col-6 mt-2">
@@ -24,7 +24,7 @@
                 <?php else: ?>
                         <div id="valider" class="row text-white ">
                             <img src="public/img/icons/hand-thumbs-up-fill.svg" alt="hands_thumbs_icon" class="valider col-2">
-                            <p class="d-block col-10">Vous êtes déjà inscrit à notre Newsletter.</p>
+                            <p class="d-block col-10"><?php echo $_SESSION['msg'];?></p>
                         </div>
                     </form>
                 <?php endif;?>

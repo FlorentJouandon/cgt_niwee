@@ -6,7 +6,7 @@ namespace Controllers;
     
 $route = Router::parseURL();
 
-if(($route === '')OR($route === 'syndicat_niwee')OR($route === 'Accueil'))
+if(($route === 'cgt_niwee')OR($route === 'Accueil'))
 {
     $articles = Request::find('*','articles ORDER BY id DESC');
 }else
@@ -16,6 +16,3 @@ if(($route === '')OR($route === 'syndicat_niwee')OR($route === 'Accueil'))
 
 $_SESSION['articles'] = $articles;
 
-if($route === 'article'){
-    Router::template('article');
-}

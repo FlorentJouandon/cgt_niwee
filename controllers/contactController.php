@@ -1,6 +1,7 @@
 <?php
 namespace Controllers;
     use Traits\Request;
+    use Traits\Router;
 
 
 if(isset($_POST['contact'])):
@@ -15,14 +16,21 @@ if(isset($_POST['contact'])):
         $message = $firstname.' '.$name.' vous a envoyé un mail.'.'\n'.$_POST['message'];
 
         //mail($to,$from,$object,$message);
-        
+
         $error = false;
-        $msg = "Votre message a bien été envoyé.</br> Nous vous répondrons dans les plus brefs délais.</br> Merci de votre intérêt.";             
+
+        if(!empty($_POST['checkletter'])){
+            Router::controller('newsletter');
+            $msg ="Votre message a bien été envoyé et vous vous êtes bien inscrit à notre newsletter.</br> Nous vous répondrons dans les plus brefs délais.</br> Merci de votre intérêt.";
+        }
+        else{
+            $msg = "Votre message a bien été envoyé.</br> Nous vous répondrons dans les plus brefs délais.</br> Merci de votre intérêt.";             
+        }
     }
     else
     {
         $error = true;
-        $msg = "Veuillez remplir tous les champs(*) sont obligatoires.";           
+        $msg = "Veuillez remplir tous les champs marqués d'un * sont obligatoires.";           
     }
 else:
     $error = true;

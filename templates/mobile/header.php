@@ -3,7 +3,7 @@
         <?php
             $menu = MENU;
             foreach($menu as $i=>$tab):
-                $i = $_SESSION['num'];
+                $i = $_COOKIE['num'];
 /////// left element \\\\\\\
                 if(isset($menu[$i-1])):
         ?>

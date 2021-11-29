@@ -66,5 +66,6 @@ trait Router
      */
     public static function config(){
         require_once "../config.php";
+        require_once "../config2.php";
     }
 }
