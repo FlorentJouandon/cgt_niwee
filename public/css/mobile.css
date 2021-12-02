@@ -11,7 +11,7 @@ p, h6{
 #header{
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 15;
     height: 30px;
 }
 #right-tab, .left-tab, #empty-right{
@@ -47,6 +47,7 @@ p, h6{
 #footer{
     position: fixed;
     bottom: 0;
+    z-index: 20;
 }
 #burger, #info, #logo{
     background-color: white;
@@ -89,4 +90,16 @@ p, h6{
 }
 .article, .bg-article-2{
     transform: skewX(15deg);
+}
+
+/* SCROLL horizontal */
+.scroll{
+    z-index: 10;
+    height: 100%;
+    width: 15%;
+    opacity: 25%;
+    position: fixed;
+}
+.sRight{
+    margin-left: 85%;
 }

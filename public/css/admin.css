@@ -25,18 +25,23 @@
     border-color: #ED5555;
     width: 75px;
 }
-
 .dashboard p{
     font-weight: bold;
     text-align: center;
 }
-
-.create{
+.create, .update{
     display: none;
 }
-table{
-    margin-left: 250px;
 
+/* p. create */
+.form{
+    box-shadow: 0px 5px 10px 0px rgba(90, 90, 90, 0.5); 
+}
+
+/* p. select */
+#table{
+    margin-left: 300px;
+    box-shadow: 0px 5px 10px 0px rgba(90, 90, 90, 0.5); 
 }
 table th, table td{
     padding-inline: 15px;

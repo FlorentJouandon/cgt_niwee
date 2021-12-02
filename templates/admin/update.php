@@ -1,11 +1,12 @@
 
 <div class="container-fluid justify-content-center">
     <div class="container-fluid col-6 text-center py-5">
-        <h1>Création d'article</h1>
+        <h1>Modifier votre article</h1>
     </div>
     <hr class="mb-5">
 
-    <?php if(!isset($_POST['article'])): ?>
+    <?php if(isset($_SESSION['article'])):
+        $article = $_SESSION['article'];?>
 
         <form class="form container col-8 bg-white text-center mb-5" action="" method="POST">
             <div class="py-3 pt-5" id="category">
@@ -23,12 +24,12 @@
             </div>
 
             <div class="py-2">
-                <label for="title">Saisir le nom de votre article :</label>
-                <input type="text" name="title" class="title bg-light mx-1 py-1">
+                <label for="title">Modifier le nom de votre article :</label>
+                <input type="text" name="title" class="title bg-light mx-1 py-1" value="<?php echo $article['title'];?>">
             </div>
 
             <div class="py-2">
-                <textarea name="text" class="col-6" id="contact-message" cols="29" rows="10" placeholder="Tapez votre texte ici"></textarea>
+                <textarea name="text" class="col-6" id="contact-message" cols="29" rows="10" placeholder="Tapez votre texte ici"><?php echo $article['text'];?></textarea>
             </div>
 
             <div class="py-3">
@@ -40,7 +41,7 @@
                 <input type="file" name="pdf" class="file">
             </div>
             <div class="py-5">
-                <input type="submit" name="create" class="btn text-white col-6" onclick="ajax()">
+                <input type="submit" name="update" class="btn text-white col-6">
             </div>
 
         <?php 

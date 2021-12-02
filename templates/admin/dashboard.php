@@ -27,4 +27,6 @@ $folder = "admin";
     <?php Router::template($folder, 'create'); ?>   
 </div>
 
-
+<div class="update">
+    <?php Router::template($folder, 'update'); ?>   
+</div>

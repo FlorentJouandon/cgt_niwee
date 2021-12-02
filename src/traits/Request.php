@@ -37,4 +37,13 @@ trait Request
         return $sql->fetchAll();
         $pdo = null;
     }
+
+    public static function update($table, $update, $condition)
+    {
+        $pdo = new Database();
+        $pdo->getInstance();
+        $sql = $pdo->prepare("UPDATE ".$table." SET ".$update." date = 'NOW()' WHERE ".$condition);     
+        return $sql->execute();
+        $pdo = null;
+    }
 }

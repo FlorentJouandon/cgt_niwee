@@ -3,8 +3,8 @@ namespace Views;
     use Traits\Router;
 
     
-$menu = MENU;
 $route = Router::parseURL();
+$menu = MENU;
 $folder = MOB;
 
 Router::template($folder,'header');
