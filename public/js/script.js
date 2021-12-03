@@ -46,7 +46,7 @@ $(document).ready(function(){
     var url = document.location.href.replace(/\/$/,"");
     var pathURL = url.substring(url.lastIndexOf("/")+1);
 
-
+// SCROLL vers la droite
     if(pathURL === 'Accueil')
     $('.sRight').on("touchmove",function(){
         window.location.replace('Nos_Publications');
@@ -73,8 +73,8 @@ $(document).ready(function(){
     });
     
 
-
-      if(pathURL === 'Se_Syndiquer')
+// SCROLL vers la gauche
+    if(pathURL === 'Se_Syndiquer')
     $('.sLeft').on("touchmove",function(){
         window.location.replace('Contactez_Nous');
     });
@@ -98,5 +98,6 @@ $(document).ready(function(){
     $('.sLeft').on("touchmove",function(){
         window.location.replace('Accueil');
     });  
+
     
 });

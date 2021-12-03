@@ -1,9 +1,6 @@
 <?php
 define("MAIL", "olympe.florent@gmail.com");
 
-define("LOGIN", 'admin');
-define("PWD", 'admin');
-
 define("MOB","mobile");
 define("DESK","desktop");
 
