@@ -15,7 +15,7 @@ if(isset($_POST['contact'])):
         $object = $_POST['object'];
         $message = $firstname.' '.$name.' vous a envoyé un mail.'.'\n'.$_POST['message'];
 
-        //mail($to,$from,$object,$message);
+        mail($to,$from,$object,$message);
 
         $error = false;
 

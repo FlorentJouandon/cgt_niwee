@@ -17,7 +17,7 @@ foreach ($menu as $tab):
     }elseif($route === 'Contactez_Nous')
     {
         Router::template($folder,'contact');
-    }elseif(($route !== 'cgt_niwee')&&($route !== 'Accueil')&&($route !== 'Nos_Publications')&&($route !== 'Nos_Droits')&&($route !== 'Notre_Collectif')&&($route !== 'Nos_Formations')&&($route !== 'Contactez_Nous')&&($route !== 'Se_Syndiquer')&&($route !== 'Admin')){
+    }elseif(($route !== 'cgt_niwee')&&($route !== 'Accueil')&&($route !== 'Nos_Publications')&&($route !== 'Nos_Droits')&&($route !== 'Notre_Collectif')&&($route !== 'Nos_Formations')&&($route !== 'Contactez_Nous')&&($route !== 'Se_Syndiquer')&&($route !== 'admin')){
         Router::template($folder, '404');
     }
 endforeach;

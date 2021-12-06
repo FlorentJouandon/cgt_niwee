@@ -17,9 +17,8 @@ endforeach;
 if($route === 'Contactez_Nous'){
     Router::controller('contact');
 }
-if($route === 'Admin'){
-    Router::controller('login');
-    Router::controller('create');
+if($route === 'admin'){
+    Router::controller('admin');
 }
 $folder = 'home';
 Router::index($folder);

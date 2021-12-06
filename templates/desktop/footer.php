@@ -33,7 +33,7 @@
                 <span> | </span>
                 <a href="" class="cookie" target="_blank">Configurer les cookies</a>
                 <span> | </span>
-                <a href="Admin" class="cookie" target="_blank">Se connecter</a>
+                <a href="admin" class="cookie" target="_blank">Se connecter</a>
             </div>
         </div>
     </div>

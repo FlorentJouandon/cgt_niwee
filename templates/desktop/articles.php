@@ -14,7 +14,7 @@
                     <p class="col-6">
                     <?php echo(substr($article[$i]['text'],0,400)) ;?>... 
                     </p>
-                    <img class="img-article col-6 w-50 h-50"src="public\img\fouleCGT.jpg" alt="">
+                    <img class="img-article col-6 w-50 h-50" src="" alt="">
                 </div>
                 
                 <button type="submit" name="article" class="col-12 mt-5">Lire l'article</button>
@@ -31,7 +31,7 @@
                 <h1><?php echo($article[$i+1]['title']) ;?></h1>
                 <p class="text-warning"><?php echo($article[$i+1]['date']) ;?><span class="text-black"> | </span><?php echo($article[$i+1]['category']) ;?></p>
                 <div class="row">
-                    <img class="img-article col-6 w-50 h-50"src="public\img\fouleCGT.jpg" alt="">
+                    <img class="img-article col-6 w-50 h-50"src="" alt="">
                     <p class="col-6">
                         <?php echo(substr($article[$i+1]['text'],0,400)) ;?>...    
                     </p>

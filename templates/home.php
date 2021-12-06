@@ -6,7 +6,7 @@ namespace Views;
 $route = Router::parseURL();
 $entrer = false;
 
-if($route !== 'Admin'):
+if($route !== 'admin'):
     if(!isset($_SESSION['entrer'])):
     ;?>
         <div class="container-fluid text-center p-5">
@@ -28,7 +28,5 @@ if($route !== 'Admin'):
         Router::index(DESK);
 
     endif ;
-else:
-    Router::index('admin');
 endif;
 ?>
